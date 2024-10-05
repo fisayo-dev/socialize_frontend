@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('./styles/variables.css');
+@import url('./styles/chats.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Sora','Montserrat';
+}
+
+body {
+    background-color: var(--app-bg-color);
+    color-scheme: dark;
+    color: var(--app-text-color);
+}
+
+.app-text-color {
+    color: var(--app-text-color);
+}
+.app-bg-color {
+    background-color: var(--app-bg-color);
+}
+.app-dark-bg-color {
+    background-color: var(--app-dark-bg-color);
+}
+.app-dark-text-color {
+    color: var(--app-dark-text-color);
+}
+
+.app-container {
+   @apply container  px-5 mx-auto;
+}
+
+input, select {
+    outline: none;
+    background-color: transparent;
+}
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--app-bg-color) inset !important;
+}
+
+input:-moz-autofill {
+    background-color: transparent !important;
+    box-shadow: 0 0 0 1000px var(--app-bg-color) inset !important;
+}
+
+input:-ms-autofill {
+    background-color: transparent !important;
+    box-shadow: 0 0 0 1000px var(--app-bg-color) inset !important;
+}
+
+
+.focus-inp-text {
+    top: 0;
+    @apply w-full py-4;
+}
+
+.focus-up-text,.focus-inp-text  {
+    position: absolute;
+    left: 0;
+    z-index: 50;
+    pointer-events: none;
+    transition: 0.1s ease-in-out;
+    @apply font-bold;
+    background-color: var(--app-bg-color)
+}
+.focus-up-text {
+    @apply text-[0.9rem];
+    top: -15%;
+}
+
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-color: var(--app-bg-color);
+    cursor: pointer;
+}
+
+.form-styles {
+    @apply flex items-center gap-3 p-5 rounded-lg border-slate-200 border-2;
+    
+}

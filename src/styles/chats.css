@@ -1,0 +1,59 @@
+@import url('./variables.css');
+
+.chats-app-flex {
+    display: grid;
+    grid-template-columns: 2.5fr 7fr;
+}
+
+.side-bar-grid {
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+
+::-webkit-scrollbar {
+    width: 3.4px;
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--app-text-color);
+    border-radius: 50px;
+}
+
+.chats-msg-grid {
+    display: grid;
+    grid-template-rows: 1.5fr 10fr 1.5fr;
+}
+
+.chat-section::-webkit-scrollbar{
+    bottom: 0;
+}
+
+.left {
+    border-bottom-right-radius: 0 !important;
+    @apply ml-auto bg-slate-700;
+}
+
+.left,.right  {
+    border-radius: 25px;
+    max-width: 45%;
+    width: auto;
+    box-shadow: 1px 2px 7px rgba(0,0,0,.2);
+    @apply flex gap-1 items-end text-[0.9rem] p-5;
+}
+
+.chat-inp-field {
+    box-shadow: 1px 2px 7px rgba(0,0,0,.2);
+}
+
+.right {
+    border-bottom-left-radius: 0 !important;
+    @apply mr-auto bg-slate-800;
+}
+
+.middle-card {
+    @apply absolute container w-4/5 md:w-1/2 xl:w-2/5 ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
